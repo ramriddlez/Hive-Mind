@@ -1,1 +1,1 @@
-# UofT-SCS-Coding-Bootcamp-Project-2-Full-Stack-Application
+# Full Stack Application - Hive Mind
