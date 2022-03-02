@@ -1,6 +1,6 @@
-# mental-heatlh-application
+# Hive Mind - A Mental Health Community Support Application
 
-A mental health to input and display the members of the team, their roles and contact information.
+A mental health community application to connect mental health advocates in a place where they can share tips and get daily inspiration to remain mindful of their own mental health.
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
@@ -16,13 +16,9 @@ A mental health to input and display the members of the team, their roles and co
 
 ## Installation
 
-Clone this repository, install Node and then run install to install all dependencies, which include inquirer and jest.
+Clone this repository, install Node and then run install to install all dependencies.
 
 `npm install`
-
-Run the tests.
-
-`npm run test`
 
 Run.
 
@@ -30,9 +26,7 @@ Run.
 
 ## Usage
 
-Begin by running with `npm start` and follow the prompts until you have no more team members to add.
-
-Once you are alerted that your file was successfully written, save your newly generated html page from the output folder.
+Begin by running with `npm start`
 
 [`Link to Tutorial`] ()
 
@@ -50,6 +44,16 @@ Contributors can clone the repository and reach out through the contacts provide
 
 ## Questions
 
-For any questions about this project, please contact me at kenneth.maclean84@gmail.com.
+For any questions about this project, please contact any of the team members at:
 
-Visit https://github.com/DoshPocket to access more of my projects.
+Email: kenneth.maclean84@gmail.com
+Github: ttps://github.com/DoshPocket
+
+Email:
+Github: https://github.com/ramriddlez
+
+Email: dejene19@gmail.com
+Github: https://github.com/bdejene19
+
+Email:
+Github: https://github.com/gammahazard

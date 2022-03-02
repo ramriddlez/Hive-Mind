@@ -1,0 +1,32 @@
+:root {
+  --bg-secondary: #efd28d;
+  --bg-primary: #5ea3ce;
+  --btn-prime-color: #004777;
+}
+
+nav {
+  background-color: var(--bg-primary);
+  padding: 0.5em 1em;
+  box-shadow: 5px 5px 5px 0 var(--bg-secondary);
+}
+nav,
+nav ul {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+nav h1 {
+  color: var(--bg-secondary);
+}
+nav li {
+  text-decoration: none;
+  color: white;
+  font-size: 1.25rem;
+  list-style: none;
+}
+
+h1,
+ul {
+  flex: 1 1 20em;
+}

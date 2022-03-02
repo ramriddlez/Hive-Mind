@@ -1,0 +1,33 @@
+:root {
+  --btn-prime-color: #004777;
+}
+
+.login-signup {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2em;
+  column-gap: 2em;
+}
+.login-signup article {
+  flex: 1 1 20em;
+}
+.login-signup form {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+
+.login-signup input,
+.login-signup button {
+  padding: 0.5em;
+  border-radius: 5px;
+}
+
+.login-signup button {
+  align-self: baseline;
+  justify-self: center;
+  margin-top: 2em;
+  background-color: var(--btn-prime-color);
+  color: white;
+  font-weight: 500;
+}
