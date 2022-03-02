@@ -1,0 +1,13 @@
+:root {
+  --bg-secondary: #efd28d;
+  --bg-primary: #5ea3ce;
+}
+
+body {
+  background-color: var(--bg-yellow);
+}
+
+h1 {
+  width: 100%;
+  background-color: var(--bg-greens);
+}
