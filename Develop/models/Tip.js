@@ -11,11 +11,23 @@ Tip.init(
       primaryKey: true,
       autoIncrement: true,
     },
+    userName: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    tip: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    votes: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
     tip_number: {
       type: DataTypes.UUID,
       defaultValue: UUIDV4,
     },
-    reader_id: {
+    user_id: {
       type: DataTypes.INTEGER,
       references: {
         model: 'user',
