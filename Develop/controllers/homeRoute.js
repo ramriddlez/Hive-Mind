@@ -1,7 +1,17 @@
-const home = require("express").Router();
+const router = require("express").Router();
+const { User } = require('../models');
+router.get("/", (req, res) => {
+  res.render("homepage");
 
-home.get("/", (req, res) => {
-  res.render("login");
 });
 
-module.exports = home;
+// Login route
+router.get('/login', (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect('/');
+    return;
+  }
+  res.render('login');
+});
+
+module.exports = router;
