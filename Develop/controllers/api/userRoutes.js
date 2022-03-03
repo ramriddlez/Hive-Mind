@@ -5,7 +5,7 @@ const { User } = require('../../models');
 router.post('/', async (req, res) => {
   try {
     const dbUserData = await User.create({
-      username: req.body.username,
+      name: req.body.name,
       email: req.body.email,
       password: req.body.password,
     });
@@ -20,6 +20,42 @@ router.post('/', async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+//update a user
+
+router.put('/:id', async (req, res) => {
+  try {
+    const userData = await User.update(req.body, {
+      where: {
+        id: req.params.id,
+      },
+      individualHooks: true
+    });
+    if (!userData[0]) {
+      res.status(404).json({ message: 'No user with this id!' });
+      return;
+    }
+    res.status(200).json(userData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+// GET one user
+router.get('/:id', async (req, res) => {
+  try {
+    const userData = await User.findByPk(req.params.id);
+    if (!userData) {
+      res.status(404).json({ message: 'No user with this id!' });
+      return;
+    }
+    res.status(200).json(userData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+
 
 // Login
 router.post('/login', async (req, res) => {
@@ -36,7 +72,7 @@ router.post('/login', async (req, res) => {
           .json({ message: 'Incorrect email or password. Please try again!' });
         return;
       }
-
+      
       const validPassword = dbUserData.checkPassword(req.body.password);
       if (!validPassword) {
         res
@@ -58,7 +94,7 @@ router.post('/login', async (req, res) => {
       res.status(500).json(err);
     }
   });
-  
+
   // Logout
   router.post('/logout', (req, res) => {
     if (req.session.loggedIn) {
@@ -69,5 +105,6 @@ router.post('/login', async (req, res) => {
       res.status(404).end();
     }
   });
-  
+
+
   module.exports = router;
