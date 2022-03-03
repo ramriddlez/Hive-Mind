@@ -1,5 +1,7 @@
 const router = require("express").Router();
 const { User } = require('../models');
+
+//get homepage
 router.get("/", (req, res) => {
   res.render("homepage");
 
