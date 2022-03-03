@@ -23,11 +23,16 @@
                         Login
                     </li>
                 </a>
-                
+                    {{#if logged_in}}
+                        <button class="btn" id="logout">logout</button>
+                    {{/if}}
             </ul>
         </nav>
     </header>
+        {{{body}}}
+            {{#if logged_in}}
+                <script src="/js/logout.js"></script>
+            {{/if}}
 
-    {{{body}}}
 </body>
 </html>
