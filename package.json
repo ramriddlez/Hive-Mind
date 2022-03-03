@@ -1,8 +1,0 @@
-{
-  "dependencies": {
-    "animejs": "^3.2.1",
-    "darkmode-js": "^1.5.7",
-    "express": "^4.17.3",
-    "file-share": "^1.2.0"
-  }
-}
