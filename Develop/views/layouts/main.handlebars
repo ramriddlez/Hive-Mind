@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="/css/jass.css"/>
     <link rel="stylesheet" href="/css/style.css"/>
     <link rel="stylesheet" href="/css/login.css"/>
+    <link rel="stylesheet" href="/css/landing.css"/>
+
 
 
 </head>
@@ -16,15 +18,20 @@
         <nav>
             <h1>Hive Mind</h1>
             <ul>
-                <a href="#">
+                <a href="/login">
                     <li>
                         Login
                     </li>
                 </a>
-                
+                    {{#if logged_in}}
+                        <button class="btn" id="logout">logout</button>
+                    {{/if}}
             </ul>
         </nav>
     </header>
         {{{body}}}
+            {{#if logged_in}}
+                <script src="/js/logout.js"></script>
+            {{/if}}
 </body>
 </html>

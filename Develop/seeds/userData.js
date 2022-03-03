@@ -5,32 +5,32 @@ const userData = [
     {
         name: 'Gob Bluth',
         email: 'gob@gmail.com',
-        password: '43fsstg',
+        password: 'gob@gmail.com',
     },
     {
         name: 'George Michael Bluth',
         email: 'gmb@gmail.com',
-        password: 'rg45y57u',
+        password: 'gmb@gmail.com',
     },
     {
         name: 'Walter White',
         email: 'ww@gmail.com',
-        password: 'in57ibeu6r',
+        password: 'ww@gmail.com',
     },
     {
         name: 'Tyrion Lannister',
         email: 'tyrion@gmail.com',
-        password: '45yrth',
+        password: 'tyrion@gmail.com',
     },
     {
         name: 'Fox Mulder',
         email: 'fox@gmail.com',
-        password: 'erv6u7',
+        password: 'fox@gmail.com',
     },
     {
         name: 'Bruce Campbell',
         email: 'bruce@gmail.com',
-        password: 'q4t39u',
+        password: 'bruce@gmail.com',
     },
 
 
