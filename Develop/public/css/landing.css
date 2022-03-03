@@ -1,0 +1,15 @@
+figure {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 3em;
+}
+
+figcaption {
+  flex: 1 1 10em;
+  font-size: 1.5rem;
+}
+
+figure img {
+  width: 40vw;
+  border-radius: 100%;
+}
