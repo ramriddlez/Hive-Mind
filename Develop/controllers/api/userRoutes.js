@@ -83,7 +83,6 @@ router.post('/login', async (req, res) => {
   
       req.session.save(() => {
         req.session.loggedIn = true;
-        console.log(req.session.cookie);
   
         res
           .status(200)
@@ -98,10 +97,13 @@ router.post('/login', async (req, res) => {
   // Logout
   router.post('/logout', (req, res) => {
     if (req.session.loggedIn) {
+      console.log("entered if statement")
       req.session.destroy(() => {
         res.status(204).end();
+        console.log("Successfully LOGGED OUT")
       });
     } else {
+      console.log("logic error")
       res.status(404).end();
     }
   });
