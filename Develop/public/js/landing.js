@@ -1,37 +1,41 @@
-const weeklyQuote = async () => {
-  let res = await fetch("/api/tips");
-  let user = getLocalStorage();
+const randomQuoteGenerator = async () => {
+  let userStore = getLocalStorage();
 
-  if (res.ok) {
-    let allQuotes = await res.json();
+  if (userStore === undefined || userStore === null) {
+    userStore = await updateUserStore();
+  } else {
+    let weekChanged = differentWeek();
 
-    let randomIndex = null;
-
-    let hasDayChanged = differentDay();
-
-    if (hasDayChanged) {
-      randomIndex = Math.floor(Math.random() * allQuotes.length);
-      user.randomQuoteIndex = randomIndex;
-      setLocalStorageDate(user.day, user.randomQuoteIndex);
-    } else {
+    if (weekChanged) {
+      userStore = updateUserStore();
     }
-    console.log(allQuotes);
-    console.log(allQuotes.length);
-    return allQuotes[randomIndex];
   }
+  let quoteHolder = document.getElementById("weekly-quote");
+  quoteHolder.innerHTML = userStore.randomQuote;
 };
 
-const differentDay = () => {
-  let dayChanged = false;
-  let userDay = moment().format("d");
-  let currDay = getLocalStorage();
+const updateUserStore = async () => {
+  let randomIndex = null;
+  let currDay = moment().format("Dd");
+  let res = await fetch("/api/tips").catch((err) => console.log(err));
+  if (res.ok) {
+    randomIndex = Math.floor(Math.random() * quotesLength);
 
-  if (currDay !== null) {
-    if (userDay !== currDay.day) {
-      dayChanged = true;
-    }
+    let allQuotes = await res.json();
+    let quotesLength = allQuotes.length;
+    let quote = allQuotes[randomIndex].tip;
+    setQuotesLocalStore(currDay, quote);
   }
-  setLocalStorageDate(userDay);
+  return getLocalStorage();
+};
+const differentWeek = () => {
+  let dayChanged = false;
+  let currDay = moment().format("Dd");
+  let userDay = getLocalStorage();
+
+  if (currDay > userDay.day + 6) {
+    dayChanged = true;
+  }
 
   return dayChanged;
 };
@@ -43,22 +47,13 @@ const getLocalStorage = () => {
   return store;
 };
 
-const setLocalStorageDate = (userDay, quoteIndex) => {
-  let store = localStorage.getItem(storeName);
+const setQuotesLocalStore = (userDay, quoteIndex) => {
   let userObject = {
     day: userDay,
-    randomQuoteIndex: quoteIndex !== undefined ? quoteIndex : null,
+    randomQuote: quoteIndex,
   };
-  if (store === undefined || store === null) {
-    localStorage.setItem(storeName, JSON.stringify(userObject));
-    return;
-  } else {
-    localStorage.setItem(storeName, JSON.stringify(userObject));
-  }
+
+  localStorage.setItem(storeName, JSON.stringify(userObject));
 };
 
-let check = async () => {
-  let answer = await weeklyQuote();
-  console.log(answer);
-};
-check();
+randomQuoteGenerator();
