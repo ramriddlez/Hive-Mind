@@ -7,6 +7,12 @@
   --bg-secondary: #141418;
   --transition-speed: 600ms;
 }
+#login-page {
+  margin-left:20em;
+  margin-right:20em;
+  display:block;
+  
+}
 .darkmode--activated h1 {
   color:yellow;
 }
