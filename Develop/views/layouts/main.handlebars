@@ -9,12 +9,11 @@
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
   <link rel="stylesheet" href="/css/style.css" />
 
-  <title>Blog</title>
+  <title>Hive Mind</title>
 </head>
 <body>
   <header>
         <nav>
-          
             <ul>
                 <a href="/login">
                     <li>
@@ -30,7 +29,7 @@
 <nav class="navbar">
   <ul class="navbar-nav">
     <li class="logo">
-      <a href="#" class="nav-link">
+      <a href="/" class="nav-link">
         <span class="link-text logo-text">HiveMind</span>
         <?xml version="1.0" encoding="utf-8"?>
         <svg version="1.1"
@@ -282,7 +281,7 @@
         <svg></svg>
       </a>
 
-        {{#if logged_in}}
+        {{#if loggedIn}}
       <a href="/login" class="nav-link">
         <div class="typewriter"><span class="link-text"><p id="type">Log out</p></span></div>
         <svg></svg>
@@ -336,7 +335,11 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+{{!-- random quote script --}}
+<script src="/js/landing.js"></script>
 <script src="/js/script.js"></script>
+
+
 
             {{#if loggedIn}}
                 <script src="/js/logout.js"></script>

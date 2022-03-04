@@ -1,5 +1,5 @@
-const { UUIDV4, Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
+const { UUIDV4, Model, DataTypes } = require("sequelize");
+const sequelize = require("../config/connection");
 
 class Tip extends Model {}
 
@@ -30,8 +30,8 @@ Tip.init(
     user_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'user',
-        key: 'id',
+        model: "user",
+        key: "id",
       },
     },
   },
@@ -40,7 +40,7 @@ Tip.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'tip',
+    modelName: "tip",
   }
 );
 
