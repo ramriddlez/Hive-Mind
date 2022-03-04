@@ -42,7 +42,6 @@ const differentWeek = () => {
 };
 
 const storeName = "mental_db-store";
-
 const getLocalStorage = () => {
   let store = JSON.parse(localStorage.getItem(storeName));
   return store;
@@ -53,7 +52,6 @@ const setQuotesLocalStore = (userDay, quoteIndex) => {
     day: userDay,
     randomQuote: quoteIndex,
   };
-
   localStorage.setItem(storeName, JSON.stringify(userObject));
 };
 
