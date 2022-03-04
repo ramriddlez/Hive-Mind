@@ -23,6 +23,7 @@
     "nodemon": "^2.0.15",
 
     "sequelize": "^6.3.5",
+
     "animejs": "^3.2.1",
     "darkmode-js": "^1.5.7"
 
