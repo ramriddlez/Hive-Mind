@@ -1,4 +1,4 @@
-const randomQuoteGenerator = async () => {
+const weeklyQuoteGenerator = async () => {
   let userStore = getLocalStorage();
 
   if (userStore === undefined || userStore === null) {
@@ -28,6 +28,7 @@ const updateUserStore = async () => {
   }
   return getLocalStorage();
 };
+
 const differentWeek = () => {
   let dayChanged = false;
   let currDay = moment().format("Dd");
@@ -56,4 +57,4 @@ const setQuotesLocalStore = (userDay, quoteIndex) => {
   localStorage.setItem(storeName, JSON.stringify(userObject));
 };
 
-randomQuoteGenerator();
+weeklyQuoteGenerator();
