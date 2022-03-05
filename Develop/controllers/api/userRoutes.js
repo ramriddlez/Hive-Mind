@@ -12,7 +12,7 @@ router.post("/", async (req, res) => {
 
     req.session.save(() => {
       req.session.loggedIn = true;
-
+      req.session.email = req.body.email;
       res.status(200).json(dbUserData);
     });
     // res.redirect("/profile");
@@ -81,6 +81,7 @@ router.post("/login", async (req, res) => {
     }
     req.session.save(() => {
       req.session.loggedIn = true;
+      req.session.email = req.body.email;
       res
         .status(200)
         .json({ user: dbUserData, message: "Successfully logged in!" });

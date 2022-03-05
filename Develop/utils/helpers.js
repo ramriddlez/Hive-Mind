@@ -20,13 +20,27 @@ const findUserByEmail = async (email) => {
       email: email,
     },
   });
-  return specificUser;
+
+  let formattedVersion = specificUser.get({ plain: true });
+  return formattedVersion;
+};
+/**
+ * filter types: most popular, newest
+ */
+const mostPopularFilter = async () => {
+  let orderedTips = await Tip.findAll({
+    order: [["votes", "DESC"]],
+  });
+
+  let formattedTips = orderedTips.map((tip) => tip.get({ plain: true }));
+  return formattedTips;
 };
 
 module.exports = {
   getAllTips,
   getAllUsers,
   findUserByEmail,
+  mostPopularFilter,
 };
 
 // module.exports = () =>

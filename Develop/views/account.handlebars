@@ -1,0 +1,24 @@
+<head>
+    <link rel="stylesheet" href=""
+</head>
+<main class="account-page">
+    <section>
+        <h1>{{username}}</h1>
+
+        <article>
+            <form>
+                <h2>Add a tip from your Hive Mind</h2>
+                <label for="new-tip"></label>
+                <textarea id="new-tip" placeholder='Ex. "Goodness would be stale without the bad"'></textarea>
+
+                <button type="submit" id="account-newpost">Create</button>
+            </form>
+        </article>
+    </section>
+    <section>
+        <article>
+            <h2>Past Tips</h2>
+            {{> display-user-post}}
+        </article>
+    </section>
+</main>
