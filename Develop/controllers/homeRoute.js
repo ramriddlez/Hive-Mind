@@ -10,7 +10,7 @@ router.get("/", (req, res) => {
 // Login route
 router.get('/login', (req, res) => {
   if (req.session.loggedIn) {
-    res.redirect('/');
+    res.redirect("/api/profile");
     return;
   }
   res.render('login');

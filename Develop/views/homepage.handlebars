@@ -1,19 +1,22 @@
 <main>
 
     
-  <div class="row-12 w-100" id="rowcard">
+  <div class="row-12 w-100" style="display: flex; justify-content: center;" id="rowcard">
     <div class="col-md-auto">
-      <div class="container" id="containercard" style="max-width: 18rem;">
+      <div class="container" id="containercard" style="max-width: 50vw; background-image: url('https://images.unsplash.com/photo-1556139943-4bdca53adf1e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80');">
+        {{!-- <img src="https://images.unsplash.com/photo-1556139943-4bdca53adf1e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80" style="position:absolute; z-index: -1; width: 50vw; height: 55vh; filter: blur(3px); -webkit-filter: blur(3px);" alt="test" /> --}}
         <h3 class="card-header" id="headcard">Welcome to HiveMind</h3>
         <div class="card-body" id="bodycard">
+        <div class="card-text" style="font-size: 2.25rem" id="textcard">
+                  {{> weekly-quote}}
 
-        <p class="card-text" id="textcard">" 
-            <br>about mind spark - blah  blah blah  blah blah blah blah blah 
-            blah blah blah blah blah blah blah blah blah blah blah blah blahbl halbahlbalhlbahla 
-            <br>
+          <!-- Positive notes and good vibes. Talk to a community that cares. --> 
+        </div>
+        <p class="card-text">
+          Join a community that cares as much as you do. 
         </p>
-        <p class="card-text">Login to gain access to daily tips and much more!
-              
+        <p class="card-text">
+          Login to gain access to daily tips and much more!    
         </p>
           <!-- Button trigger modal -->
 
@@ -45,3 +48,4 @@
   </div>
   </div>
 </main>
+<script src="/js/landing.js"></script>
