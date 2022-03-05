@@ -262,10 +262,12 @@
     </li>
    
   <li class="nav-item">
+    {{#unless loggedIn}}
       <a href="/login" class="nav-link">
         <div class="typewriter"><span class="link-text"><p id="type">Login</p></span></div>
         <svg></svg>
       </a>
+    {{/unless}}
 
         {{#if loggedIn}}
       <a href="/login" class="nav-link">
