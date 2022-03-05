@@ -9,12 +9,12 @@
 .login-signup {
   display: flex;
   flex-wrap: wrap;
-  width: 80vw;
+  /* width: 80vw; */
   border: solid var(--bg-primary) 3px;
   box-shadow: 0 5px 5px 5px var(--btn-prime-color);
   border-radius: 5px;
   column-gap: 2em;
-  justify-content: center;
+  /* justify-content: center; */
 }
 .login-signup article {
   padding: 2em;
@@ -22,7 +22,7 @@
 .login-signup article:first-of-type {
   background-color: var(--bg-primary);
   color: white;
-  flex: 1 1 50%;
+  flex: 1 1 20%;
 }
 .login-signup article:last-of-type {
   flex: 1 1 20%;
@@ -46,7 +46,6 @@
 .login-signup button {
   align-self: baseline;
   justify-self: center;
-  margin-top: 2em;
   background-color: var(--btn-prime-color);
   color: white;
   font-weight: 500;

@@ -4,14 +4,26 @@ const weeklyQuoteGenerator = async () => {
   if (userStore === undefined || userStore === null) {
     userStore = await updateUserStore();
   } else {
-    let weekChanged = differentWeek();
+    const path = window.location.pathname;
+    if (path === "" || path === "/") {
+      let weekChanged = differentWeek();
 
-    if (weekChanged) {
-      userStore = updateUserStore();
+      if (weekChanged) {
+        userStore = updateUserStore();
+      }
+    } else {
+      let dayChanged = differentDay();
+      if (dayChanged) {
+        userStore = updateUserStore();
+      }
+
+      let dailyQuotePlaceHolder = document.getElementById("daily-quote");
+      dailyQuotePlaceHolder.innerHTML = `"${userStore.randomQuote}"`;
+      return;
     }
   }
   let quoteHolder = document.getElementById("weekly-quote");
-  quoteHolder.innerHTML = userStore.randomQuote;
+  quoteHolder.innerHTML = `"${userStore.randomQuote}"`;
 };
 
 const updateUserStore = async () => {
@@ -19,10 +31,10 @@ const updateUserStore = async () => {
   let currDay = moment().format("Dd");
   let res = await fetch("/api/tips").catch((err) => console.log(err));
   if (res.ok) {
-    randomIndex = Math.floor(Math.random() * quotesLength);
-
     let allQuotes = await res.json();
     let quotesLength = allQuotes.length;
+    randomIndex = Math.floor(Math.random() * quotesLength);
+
     let quote = allQuotes[randomIndex].tip;
     setQuotesLocalStore(currDay, quote);
   }
@@ -30,11 +42,23 @@ const updateUserStore = async () => {
 };
 
 const differentWeek = () => {
-  let dayChanged = false;
+  let weekChanged = false;
   let currDay = moment().format("Dd");
   let userDay = getLocalStorage();
 
   if (currDay > userDay.day + 6) {
+    weekChanged = true;
+  }
+
+  return weekChanged;
+};
+
+const differentDay = () => {
+  let dayChanged = false;
+  let currDay = moment().format("Dd");
+  let userDay = getLocalStorage();
+
+  if (currDay > userDay.day - 3) {
     dayChanged = true;
   }
 
