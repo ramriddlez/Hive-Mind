@@ -1,0 +1,21 @@
+<section id="dashboard-posts">
+    {{#each formattedTips as |tip|}}
+    <article class="dashboard-tip">
+        <p class="tip-quote">
+            {{tip.tip}} 
+        </p>
+        <div>
+            <p class="tip-username"> 
+                - {{tip.userName}}
+            </p>
+            
+            <p class="favourite-icon">
+                ❤️      
+            </p>
+
+        </div>
+    
+
+    </article>
+    {{/each}}    
+</section>
