@@ -1,12 +1,15 @@
 const router = require("express").Router();
 const { User } = require("../../models");
-const { getAllTips } = require("../../utils/helpers");
+const { getAllTips, mostPopularFilter } = require("../../utils/helpers");
+
+// renders home page with loggedIn boolean and tips
 router.get("/", async (req, res) => {
   // console.log("this is my req session: ", req.session.loggedIn);
   let loggedIn = req.session.loggedIn;
   const tips = await getAllTips();
   let formattedTips = tips.map((tip) => tip.get({ plain: true }));
-  console.log("my tips: ", formattedTips);
+
+  console.log(tips);
   res.render("profile", { loggedIn, formattedTips });
 });
 router.get("/:id", async (req, res) => {
