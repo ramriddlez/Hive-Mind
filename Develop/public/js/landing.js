@@ -18,9 +18,6 @@ const weeklyQuoteGenerator = async () => {
       }
 
       let dailyQuotePlaceHolder = document.getElementById("daily-quote");
-      console.log("has my day changed: ", dayChanged);
-      console.log("my placeholder el: ", dailyQuotePlaceHolder);
-      console.log("my user store: ", userStore);
       dailyQuotePlaceHolder.innerHTML = `"${userStore.randomQuote}"`;
       return;
     }
