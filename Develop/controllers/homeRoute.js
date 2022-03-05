@@ -10,7 +10,7 @@ router.get("/login", (req, res) => {
     res.redirect("/");
     return;
   }
-  res.render("profile");
+  res.render("login");
 });
 
 module.exports = router;

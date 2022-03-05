@@ -7,12 +7,16 @@
   --bg-secondary: #141418;
   --transition-speed: 600ms;
 }
-#login-page {
-  margin-left:20em;
-  margin-right:20em;
-  display:block;
-  
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+/* #login-page {
+  margin-left: 20em;
+  margin-right: 20em;
+  display: block;
+} */
 .darkmode--activated h1 {
   color: yellow;
 }
@@ -200,7 +204,7 @@ p#type {
 }
 
 #weekly-quote {
-  font-size: 3rem;
+  font-size: 2.25rem;
   text-align: center;
   font-style: italic;
   padding: 3em 0;

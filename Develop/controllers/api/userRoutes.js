@@ -15,7 +15,7 @@ router.post("/", async (req, res) => {
 
       res.status(200).json(dbUserData);
     });
-    res.redirect("/profile");
+    // res.redirect("/profile");
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -72,17 +72,15 @@ router.post("/login", async (req, res) => {
       return;
     }
 
-    const validPassword = dbUserData.checkPassword(req.body.password);
+    const validPassword = await dbUserData.checkPassword(req.body.password);
     if (!validPassword) {
       res
         .status(400)
         .json({ message: "Incorrect email or password. Please try again!" });
       return;
     }
-
     req.session.save(() => {
       req.session.loggedIn = true;
-
       res
         .status(200)
         .json({ user: dbUserData, message: "Successfully logged in!" });
