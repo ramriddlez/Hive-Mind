@@ -3,7 +3,6 @@ const { User } = require("../../models");
 router.get("/", (req, res) => {
   // console.log("this is my req session: ", req.session.loggedIn);
   let loggedIn = req.session.loggedIn;
-  console.log("logged in boolean: ", req.session.logged);
   res.render("profile", { loggedIn });
 });
 router.get("/:id", async (req, res) => {

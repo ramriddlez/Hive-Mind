@@ -9,15 +9,18 @@ const weeklyQuoteGenerator = async () => {
       let weekChanged = differentWeek();
 
       if (weekChanged) {
-        userStore = updateUserStore();
+        userStore = await updateUserStore();
       }
     } else {
       let dayChanged = differentDay();
       if (dayChanged) {
-        userStore = updateUserStore();
+        userStore = await updateUserStore();
       }
 
       let dailyQuotePlaceHolder = document.getElementById("daily-quote");
+      console.log("has my day changed: ", dayChanged);
+      console.log("my placeholder el: ", dailyQuotePlaceHolder);
+      console.log("my user store: ", userStore);
       dailyQuotePlaceHolder.innerHTML = `"${userStore.randomQuote}"`;
       return;
     }
@@ -37,8 +40,8 @@ const updateUserStore = async () => {
 
     let quote = allQuotes[randomIndex].tip;
     setQuotesLocalStore(currDay, quote);
+    return getLocalStorage();
   }
-  return getLocalStorage();
 };
 
 const differentWeek = () => {
@@ -58,7 +61,7 @@ const differentDay = () => {
   let currDay = moment().format("Dd");
   let userDay = getLocalStorage();
 
-  if (currDay > userDay.day - 3) {
+  if (currDay > userDay.day) {
     dayChanged = true;
   }
 
