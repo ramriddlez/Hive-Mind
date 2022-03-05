@@ -2,9 +2,9 @@ const router = require("express").Router();
 const { User } = require("../../models");
 router.get("/", (req, res) => {
   // console.log("this is my req session: ", req.session.loggedIn);
-  let loggedIn = req.session.loggedIn;
-  console.log("logged in boolean: ", req.session.logged);
-  res.render("profile", { loggedIn });
+  // let loggedIn = req.session.loggedIn;
+  console.log(req.session);
+  res.render("profile", { loggedIn: req.session.loggedIn });
 });
 router.get("/:id", async (req, res) => {
   try {
