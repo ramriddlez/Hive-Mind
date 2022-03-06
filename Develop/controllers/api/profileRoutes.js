@@ -6,11 +6,16 @@ const { getAllTips, mostPopularFilter } = require("../../utils/helpers");
 router.get("/", async (req, res) => {
   // console.log("this is my req session: ", req.session.loggedIn);
   let loggedIn = req.session.loggedIn;
+
+  if (!loggedIn) {
+    res.redirect("/login");
+    return;
+  }
   const tips = await getAllTips();
   let formattedTips = tips.map((tip) => tip.get({ plain: true }));
-  console.log("/:: ", new Date(formattedTips[0].createdAt).getFullYear());
   res.render("profile", { loggedIn, formattedTips });
 });
+
 // router.get("/:id", async (req, res) => {
 //   try {
 //     const userData = await User.findByPk(req.params.id);

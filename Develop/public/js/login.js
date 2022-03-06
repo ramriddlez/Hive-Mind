@@ -12,11 +12,9 @@ const loginFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      // await (await fetch("/api/profile/")).json();
       document.location.replace("/api/profile");
-      console.log("hit");
 
-      alert("LOGGED IN");
+      // alert("LOGGED IN");
     } else {
       alert("Failed to log in");
     }
