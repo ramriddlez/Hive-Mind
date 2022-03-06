@@ -5,7 +5,11 @@ router.get("/", async (req, res) => {
   let user = await findUserByEmail(userEmail).catch((err) => console.log(err));
   console.log("my user response object from helper function: ", user);
 
-  res.render("account", { username: user.name });
+  res.render("account", {
+    loggedIn: req.session.loggedIn,
+    username: user.name,
+    tips: user.tips,
+  });
 });
 
 // filters route
