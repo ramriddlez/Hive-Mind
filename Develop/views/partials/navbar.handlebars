@@ -256,20 +256,20 @@
     {{/unless}}
 
         {{#if loggedIn}}
-      <a href="/login" class="nav-link">
-        <div class="typewriter" id="logout-button"><span class="link-text"><p id="type">Log out</p></span></div>
+      <a href="#" id="logout-button" class="nav-link">
+        <div class="typewriter" ><span class="link-text"><p>Log out</p></span></div>
         <svg></svg>
       </a>
-      {{/if}}
+      {{!-- {{/if}} --}}
   </li>
-   {{#unless loggedIn}}
+   {{!-- {{#unless loggedIn}} --}}
   <li class="nav-item">
     <a href="#" class="nav-link">
       <div class="typewriter"> <span class="link-text"><p id="type">Post a tip</p></span></div>
       <svg></svg>
     </a>
 </li>
-{{/unless}}
+{{/if}}
 <li class="nav-item">
   <a href="/api/account" class="nav-link">
     <div class="typewriter"> <span class="link-text"><p id="type">My Account</p></span></div>
