@@ -14,6 +14,8 @@ const PORT = process.env.PORT || 3001;
 app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
 
+
+
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
 const sess = {
   secret: "my secret",
@@ -31,6 +33,7 @@ const sess = {
 };
 
 app.use(session(sess));
+app.use(express.static('public'));
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
