@@ -8,8 +8,7 @@ router.get("/", async (req, res) => {
   let loggedIn = req.session.loggedIn;
   const tips = await getAllTips();
   let formattedTips = tips.map((tip) => tip.get({ plain: true }));
-
-  console.log(tips);
+  console.log("/:: ", new Date(formattedTips[0].createdAt).getFullYear());
   res.render("profile", { loggedIn, formattedTips });
 });
 router.get("/:id", async (req, res) => {
