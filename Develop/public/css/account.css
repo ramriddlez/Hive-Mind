@@ -44,7 +44,7 @@ button {
   color: white;
 }
 form button {
-  width: 10vw;
+  width: max-content;
   padding: 0.5em;
   font-weight: 500;
   background-color: #2892d7;
@@ -53,7 +53,7 @@ form button {
 
 .flex {
   display: flex;
-  align-items: center;
+  align-items: baseline;
 
   column-gap: 1em;
 }
@@ -69,7 +69,7 @@ form button {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  row-gap: 3em;
 }
 
 #past-tips > article {
@@ -79,24 +79,31 @@ form button {
   flex-wrap: wrap;
   margin: 0;
   row-gap: 0;
+  height: fit-content;
+  justify-content: flex-start;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 3px 3px 0 var(--bg-primary);
 }
+
+#past-tips > article > i {
+  font-size: 3rem;
+  align-self: center;
+  padding-bottom: 0.5em;
+  cursor: pointer;
+}
 .tip-quote {
-  padding: 1em;
+  width: 100%;
 }
 
 .tip-quote {
-  flex: 1 1 75%;
-  height: 100%;
+  padding: 1em;
+
   background-color: #c3c9e9;
 }
 
 .tip-footer {
-  flex: 1 1 25%;
+  flex: 1 1 50%;
   margin-top: -1em;
   padding: 0.25em 1em;
-}
-.tip-footer {
 }
