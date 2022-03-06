@@ -62,10 +62,7 @@ div.col-sm-2 {
   
   
 }
-div.container-fluid{
-  margin-left:55px;
 
-}
 #btn1:hover{
   background-color:white;
    color:black;;
@@ -79,6 +76,9 @@ div.container-fluid{
   #btn1 {
     color:white;
     background-color:black;
+    margin-left:50px;
+   
+    
    
   }
   #btn2 {
