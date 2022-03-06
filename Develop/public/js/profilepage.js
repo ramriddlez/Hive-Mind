@@ -84,7 +84,3 @@ $(document).ready(function(){
       $('#dogImage').attr('src', data.message)
     });
   }
-  $(".btn").on("click",function(){
-    $(".input").toggleClass("inclicked");
-    $(".btn").toggleClass("close");
-  })
