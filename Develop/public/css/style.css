@@ -226,9 +226,10 @@ p#type {
 }
 
 /* Small screens */
-@media only screen and (max-width: 650px) {
-  .navbar:focus .link-text {
-    display: inline;
-  }
+@media screen and (max-width: 600px) {
+
+ 
+  #tags {max-width:15%;}
+
 }
 

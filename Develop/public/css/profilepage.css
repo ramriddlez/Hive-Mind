@@ -23,7 +23,6 @@ div#welcomemsg-quote{
   div#slideSource.fade {
   opacity:0;
   }
-/* Set gray background color and 100% height */
 .sidenav {
   padding-top: 20px;
   background-color: #f1f1f1;
@@ -53,16 +52,14 @@ margin-left:50px;
 margin-right:auto;
 vertical-align:middle;
 }
-div#searcharea {
-  margin-left:85px;
-}
+
 div.col-sm-2 {
   background-color:lightgrey;
   
   
   
 }
-
+#tags {max-width:55%;}
 #btn1:hover{
   background-color:white;
    color:black;;
@@ -76,7 +73,7 @@ div.col-sm-2 {
   #btn1 {
     color:white;
     background-color:black;
-    margin-left:50px;
+    margin-left:5px;
    
     
    
@@ -84,7 +81,7 @@ div.col-sm-2 {
   #btn2 {
     color:white;
     background-color:black;
-    margin-left:50%;
+    margin-left:45%;
   }
   img#dogImage{
     max-width:500px;
