@@ -11,6 +11,7 @@ var TxtType = function(el, toRotate, period) {
     this.isDeleting = false;
 };
 document.getElementById("divmovie").style.display="none";
+document.getElementById("btn2").style.display="none";
 TxtType.prototype.tick = function() {
     var i = this.loopNum % this.toRotate.length;
     var fullTxt = this.toRotate[i];

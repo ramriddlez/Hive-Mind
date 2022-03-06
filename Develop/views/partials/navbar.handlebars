@@ -262,27 +262,27 @@
       </a>
       {{/if}}
   </li>
-   {{#if loggedIn}}
+   {{#unless loggedIn}}
   <li class="nav-item">
     <a href="#" class="nav-link">
       <div class="typewriter"> <span class="link-text"><p id="type">Post a tip</p></span></div>
       <svg></svg>
     </a>
 </li>
-  {{/if}}
+{{/unless}}
 <li class="nav-item">
   <a href="/api/account" class="nav-link">
     <div class="typewriter"> <span class="link-text"><p id="type">My Account</p></span></div>
     <svg></svg>
   </a>
 </li>
-   {{#if loggedIn}}
+
 <li class="nav-item">
   <a href="/api/profile" class="nav-link">
     <div class="typewriter"> <span class="link-text"><p id="type">Dashboard</p></span></div>
     <svg></svg>
   </a>
-  {{/if}}
+
 </li>
 
   </a>
