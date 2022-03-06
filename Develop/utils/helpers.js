@@ -4,17 +4,37 @@ const getAllTips = async () => {
   let allPosts = await Tip.findAll({});
   return allPosts;
 };
+const createNewTip = async (email, tipContent) => {
+  let user = await findUserByEmail(email);
+  console.log("my user: ", user);
+  let newTip = {
+    userName: user.name,
+    tip: tipContent.blogText,
+    user_id: user.id,
+  };
+  Tip.create(newTip);
+};
+
+const deleteTip = (tipId) => {
+  let successDelete = true;
+  Tip.destroy({
+    where: {
+      id: tipId,
+    },
+  }).catch((err) => console.log(err));
+  return successDelete;
+};
 
 const getAllUsers = async () => {
   let allUsers = await User.findAll({
-    attributes: ["name", "email"],
+    attributes: ["id", "name", "email"],
     include: [{ model: Tip }],
   });
   return allUsers;
 };
 const findUserByEmail = async (email) => {
   let specificUser = await User.findOne({
-    attributes: ["name", "email"],
+    attributes: ["id", "name", "email"],
     include: [{ model: Tip }],
     where: {
       email: email,
@@ -38,6 +58,8 @@ const mostPopularFilter = async () => {
 
 module.exports = {
   getAllTips,
+  createNewTip,
+  deleteTip,
   getAllUsers,
   findUserByEmail,
   mostPopularFilter,

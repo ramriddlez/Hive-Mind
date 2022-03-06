@@ -70,11 +70,8 @@ div.container-fluid {
   color: black;
 }
 
-#tags {max-width:55%;}
-#btn1:hover{
-  background-color:white;
-   color:black;;
-  }
+
+
   
 #btn2:hover{
   background-color:white;
@@ -85,7 +82,7 @@ div.container-fluid {
     color:white;
     background-color:black;
 
-  margin-left:50%;
+
   }
     
    h3 {
@@ -106,6 +103,7 @@ div.container-fluid {
   }
 body {
   background: #212129;
+
 }
 
 ::selection {
@@ -117,7 +115,7 @@ body {
 
    
     
-    margin-left:70%;
+    
   
   
 

@@ -6,4 +6,9 @@ const apiRoutes = require("./api");
 router.use("/", homeRoutes);
 router.use("/api", apiRoutes);
 
+// wild card route
+router.get("/*", (req, res) => {
+  res.redirect("/login");
+});
+
 module.exports = router;

@@ -1,5 +1,11 @@
 const router = require("express").Router();
-const { findUserByEmail, mostPopularFilter } = require("../../utils/helpers");
+const {
+  findUserByEmail,
+  createNewTip,
+  deleteTip,
+  mostPopularFilter,
+} = require("../../utils/helpers");
+
 router.get("/", async (req, res) => {
   let userEmail = req.session.email;
   let user = await findUserByEmail(userEmail).catch((err) => console.log(err));
@@ -12,6 +18,21 @@ router.get("/", async (req, res) => {
   });
 });
 
+router.post("/newTip", async (req, res) => {
+  let newTip = createNewTip(req.session.email, req.body);
+  res.status(200).json(newTip);
+});
+
+router.delete("/:id", (req, res) => {
+  let deleteId = req.params.id;
+  let isDeleted = deleteTip(deleteId);
+
+  if (isDeleted) {
+    res.status(200).json({});
+  } else {
+    res.status(500).json({ message: "Error handling delete request" });
+  }
+});
 // filters route
 router.get("/:filter", async (req, res) => {
   let tipFilterType = req.params.filter;
