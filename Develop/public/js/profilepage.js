@@ -64,12 +64,16 @@ $(document).ready(function(){
    
       $("div").fadeIn(3000);
       $("#divmovie").fadeOut(3000);
+      $("#btn1").show()
+      $("#btn2").hide()
      
     });
      $("#btn1").click(function(){
+     
       $("div").fadeOut(3000);
       $("#divmovie").fadeIn(3000);
-     
+   $("#btn1").hide()
+   $("#btn2").show()
      
   
 
@@ -82,5 +86,6 @@ $(document).ready(function(){
     $.get( "https://dog.ceo/api/breeds/image/random", function( data ) {
       // set the source of the image
       $('#dogImage').attr('src', data.message)
+
     });
   }
