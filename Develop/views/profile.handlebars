@@ -14,10 +14,13 @@
   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/profile.css" />
+    <link rel="stylesheet" href="/css/profilepage.css" />
 </head>
-
+<button id="btn2">Bring me back!</button>
+<button id="btn1">Show me cute dogs</button>
  <main>
    
 <div class="container-fluid text-center">    
@@ -28,7 +31,7 @@
     <section class="navbar-section">
          
               <input id = "tags" class="form-input"type="text" placeholder="Search for a tip">
-              <button class="c-hand" id="searchBtn" type="button" id="button-addon2" data-toggle="modal"><i class="far fa-search"></i></button>
+              <button class="c-hand" id="searchBtn" type="button" id="button-addon2" data-toggle="modal"><i class="fa fa-search"></i></button>
  
       <br>Search History:<br>
       <p><a href="#">Link</a></p>
@@ -36,9 +39,13 @@
       <p><a href="#">Link</a></p>
     </div>
     <div class="col-sm-8 text-left"> 
-      <h1>Welcome</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <hr>
+    <div class="a" id="welcomemsg-quote"> 
+      <h1>
+        <a  id="welcometype" class="typewrite" data-period="2000" data-type='[ "Welcome!", "Username!", "This is the HiveMind Landing page", "Search and favourite tips from other community members!" ]'>
+          <span class="wrap"></span>
+        </a>
+      </h1>
+      </div>
       <h3>Quote of the day!</h3>
       {{> daily-quote}}
       <h3>The Hive Head</h3>
@@ -55,6 +62,16 @@ Favourited Tips:
   <p>HiveMind</p>
 </footer>
 </main>
+ <center id="divmovie""">
+<button onClick="getRandomImage()">Click for a random image</button><br />
+<br />
+<img id="dogImage" src="https://dog.ceo/img/dog-api-logo.svg">
+ 
+<!-- Main table for the snake -->
 
+
+
+</center>         
 <script src="/js/landing.js"></script>
-<script src="/js/profile.js"></script>
+<script src="/js/script.js"></script>
+<script src="/js/profilepage.js"></script>
