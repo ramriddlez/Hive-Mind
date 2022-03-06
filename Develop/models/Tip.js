@@ -22,6 +22,7 @@ Tip.init(
     votes: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      defaultValue: 0,
     },
     tip_number: {
       type: DataTypes.UUID,
@@ -37,7 +38,7 @@ Tip.init(
   },
   {
     sequelize,
-    timestamps: false,
+    timestamps: true,
     freezeTableName: true,
     underscored: true,
     modelName: "tip",
