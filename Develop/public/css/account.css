@@ -14,6 +14,9 @@ section article {
 }
 section article {
   align-self: center;
+}
+
+section #create-tip {
   padding: 1em;
 }
 
@@ -57,4 +60,43 @@ form button {
 .flex i {
   font-size: 3rem;
   justify-self: center;
+}
+
+#past-tips {
+  justify-self: center;
+  column-gap: 2em;
+  row-gap: 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#past-tips > article {
+  flex: 1 1 15em;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0;
+  row-gap: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 3px 0 var(--bg-primary);
+}
+.tip-quote {
+  padding: 1em;
+}
+
+.tip-quote {
+  flex: 1 1 75%;
+  height: 100%;
+  background-color: #c3c9e9;
+}
+
+.tip-footer {
+  flex: 1 1 25%;
+  margin-top: -1em;
+  padding: 0.25em 1em;
+}
+.tip-footer {
 }

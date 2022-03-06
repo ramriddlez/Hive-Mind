@@ -1,0 +1,13 @@
+<div id="past-tips">
+    {{#each tips as |tip|}}
+        <article id="account-tip-{{tip.id}}" data-tip-id="{{tip.id}}">
+            <p class="tip-quote">
+                {{tip.tip}}
+            </p>   
+            <div class="tip-footer">
+                <p><i>Date Created</i></p>
+                <p>{{tip.votes}} ⬆</p>
+            </div>
+        </article>
+    {{/each}}
+</div>
