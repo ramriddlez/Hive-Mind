@@ -1,92 +1,86 @@
-
-/* Remove the navbar's default margin-bottom and rounded borders */ {}
+/* Remove the navbar's default margin-bottom and rounded borders */
 .navbar {
   margin-bottom: 0;
   border-radius: 0;
 }
 div#quotecard {
-  border:2px black;
-  align-items:center;
-  text-align:center;
+  border: 2px black;
+  align-items: center;
+  text-align: center;
 }
 /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-.row.content {height: 75em}
-div#slideSource {
-  opacity:1;
-  -webkit-transition: opacity 3s;
-  -moz-transition: opacity 3s;     
-  transition: opacity 3s; 
-  }
-div#welcomemsg-quote{
-  text-align:center;
+.row.content {
+  height: 75em;
 }
-  div#slideSource.fade {
-  opacity:0;
-  }
+div#slideSource {
+  opacity: 1;
+  -webkit-transition: opacity 3s;
+  -moz-transition: opacity 3s;
+  transition: opacity 3s;
+}
+div#welcomemsg-quote {
+  text-align: center;
+}
+div#slideSource.fade {
+  opacity: 0;
+}
 /* Set gray background color and 100% height */
 .sidenav {
   padding-top: 20px;
   background-color: #f1f1f1;
   height: 100%;
 }
-h3#quotetext{
-  text-align:center;
+h3#quotetext {
+  text-align: center;
 }
 /* Set black background color, white text and some padding */
 footer {
   background-color: #555;
   color: white;
-  padding: 15px;}
-p{
-  text-align:center;
+  padding: 15px;
 }
-h1{
-  text-align:center;
+p {
+  text-align: center;
+}
+h1 {
+  text-align: center;
 }
 
-
-
-
-ul.list-group  {
-font-weight:bold;
-margin-left:50px;
-margin-right:auto;
-vertical-align:middle;
+ul.list-group {
+  font-weight: bold;
+  margin-left: 50px;
+  margin-right: auto;
+  vertical-align: middle;
 }
 div#searcharea {
-  margin-left:85px;
+  margin-left: 85px;
 }
 div.col-sm-2 {
-  background-color:lightgrey;
-  
-  
-  
+  background-color: lightgrey;
 }
-div.container-fluid{
-  margin-left:55px;
+div.container-fluid {
+  margin-left: 55px;
+}
+#btn1:hover {
+  background-color: white;
+  color: black;
+}
 
+#btn2:hover {
+  background-color: white;
+  color: black;
 }
-#btn1:hover{
-  background-color:white;
-   color:black;;
-  }
-  
-#btn2:hover{
-  background-color:white;
-   color:black;;
-  }
-  
-  #btn1 {
-    color:white;
-    background-color:black;
-   
-  }
-  #btn2 {
-    color:white;
-    background-color:black;
-    margin-left:50%;
-  }
-  img#dogImage{
-    max-width:500px;
-    max-height:500px;
-  }
+
+#btn1 {
+  color: white;
+  background-color: black;
+}
+#btn2 {
+  color: white;
+  background-color: black;
+  margin-left: 50%;
+}
+img#dogImage {
+  max-width: 500px;
+  max-height: 500px;
+}
