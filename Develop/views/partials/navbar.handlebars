@@ -246,7 +246,7 @@
         </object>
       </a>
     </li>
-   
+   <div>
   <li class="nav-item">
     {{#unless loggedIn}}
       <a href="/login" class="nav-link">
@@ -257,35 +257,39 @@
 
         {{#if loggedIn}}
       <a href="/login" class="nav-link">
-        <div class="typewriter"><span class="link-text"><p id="type">Log out</p></span></div>
+        <div class="typewriter" id="logout-button"><span class="link-text"><p id="type">Log out</p></span></div>
         <svg></svg>
       </a>
       {{/if}}
   </li>
+   {{#unless loggedIn}}
   <li class="nav-item">
     <a href="#" class="nav-link">
       <div class="typewriter"> <span class="link-text"><p id="type">Post a tip</p></span></div>
       <svg></svg>
     </a>
 </li>
+{{/unless}}
 <li class="nav-item">
   <a href="/api/account" class="nav-link">
     <div class="typewriter"> <span class="link-text"><p id="type">My Account</p></span></div>
     <svg></svg>
   </a>
 </li>
+
 <li class="nav-item">
-  <a href="#" class="nav-link">
-    <div class="typewriter"> <span class="link-text"><p id="type">Recently Visited</p></span></div>
+  <a href="/api/profile" class="nav-link">
+    <div class="typewriter"> <span class="link-text"><p id="type">Dashboard</p></span></div>
     <svg></svg>
   </a>
-  </li>
- <span  style="margin-top:2em" class="link-text"><button type="button" id="modBtn" class="btn btn-primary" data-bs-toggle="modal"
-  data-bs-target="#exampleModal">
-  Grow the HiveMind
-</button></span>
+
 </li>
-    
+
+  </a>
+  </li>
+
+</li>
+ </div>   
   <!-- More nav links here -->
 
   </ul>

@@ -11,6 +11,7 @@ var TxtType = function(el, toRotate, period) {
     this.isDeleting = false;
 };
 document.getElementById("divmovie").style.display="none";
+document.getElementById("btn2").style.display="none";
 TxtType.prototype.tick = function() {
     var i = this.loopNum % this.toRotate.length;
     var fullTxt = this.toRotate[i];
@@ -64,12 +65,16 @@ $(document).ready(function(){
    
       $("div").fadeIn(3000);
       $("#divmovie").fadeOut(3000);
+      $("#btn1").show()
+      $("#btn2").hide()
      
     });
      $("#btn1").click(function(){
+     
       $("div").fadeOut(3000);
       $("#divmovie").fadeIn(3000);
-     
+   $("#btn1").hide()
+   $("#btn2").show()
      
   
 
@@ -82,5 +87,18 @@ $(document).ready(function(){
     $.get( "https://dog.ceo/api/breeds/image/random", function( data ) {
       // set the source of the image
       $('#dogImage').attr('src', data.message)
+
     });
   }
+  function searchToggle(obj, evt){
+    var container = $(obj).closest('.search-wrapper');
+        if(!container.hasClass('active')){
+            container.addClass('active');
+            evt.preventDefault();
+        }
+        else if(container.hasClass('active') && $(obj).closest('.input-holder').length == 0){
+            container.removeClass('active');
+            // clear input
+            container.find('.search-input').val('');
+        }
+}
