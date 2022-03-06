@@ -5,11 +5,13 @@ const logout = async () => {
   });
 
   if (response.ok) {
+    console.log("innn")
     document.location.replace("/login");
     console.log("SUCCESSFULLY LOGGED OUT");
   } else {
     alert(response.statusText);
   }
 };
-console.log("ran script");
-document.querySelector("#logout-button").addEventListener("click", logout);
+
+document.getElementById("logout-button").addEventListener("click", logout);
+
