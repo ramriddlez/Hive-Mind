@@ -1,13 +1,20 @@
 <head>
-    <link rel="stylesheet" href=""
+    <titl>Account</titl>
+    <link rel="stylesheet" href="/css/account.css"/>
 </head>
 <main class="account-page">
-    <section>
-        <h1>{{username}}</h1>
+    <section >
+        <div class="flex">
+            <h1>{{username}}</h1>
+            <i class="fa-solid fa-user-gear"></i>
+        </div>
 
-        <article>
+        <article id="create-tip">
             <form>
-                <h2>Add a tip from your Hive Mind</h2>
+                <div class="flex">
+                <h2>Add a tip from your Hive Mind 💬</h2>
+{{!-- <i class="fa-solid fa-user-gear"></i> --}}
+                </div>
                 <label for="new-tip"></label>
                 <textarea id="new-tip" placeholder='Ex. "Goodness would be stale without the bad"'></textarea>
 
@@ -16,8 +23,9 @@
         </article>
     </section>
     <section>
+                    <h2>Past Tips</h2>
+
         <article>
-            <h2>Past Tips</h2>
             {{> display-user-post}}
         </article>
     </section>

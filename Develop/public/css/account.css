@@ -1,0 +1,60 @@
+.account-page {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2em;
+  width: 80vw;
+}
+
+.account-page > section,
+section article {
+  flex: 1 1 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2em;
+}
+section article {
+  align-self: center;
+  padding: 1em;
+}
+
+#create-tip {
+  background-image: linear-gradient(30deg, #6649b8, #2892d7);
+  border-radius: 10px;
+  box-shadow: 0 5px 5px 5px #23232e;
+}
+
+h2 {
+  padding: 0;
+  margin: 0;
+}
+article form {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  row-gap: 0.5em;
+}
+textarea {
+  padding: 0.5em;
+}
+article form,
+button {
+  color: white;
+}
+form button {
+  width: 10vw;
+  padding: 0.5em;
+  font-weight: 500;
+  background-color: #2892d7;
+  border-radius: 5px;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+
+  column-gap: 1em;
+}
+.flex i {
+  font-size: 3rem;
+  justify-self: center;
+}
