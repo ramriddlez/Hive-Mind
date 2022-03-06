@@ -22,7 +22,13 @@
 
 <button id="btn2">Bring me back!</button>
 <button id="btn1">Show me cute dogs</button>
-      
+   <div class="search-wrapper">
+    <div class="input-holder">
+        <input type="text" class="search-input" placeholder="Type to search" />
+        <button class="search-icon" onclick="searchToggle(this, event);"><span></span></button>
+    </div>
+    <span class="close" onclick="searchToggle(this, event);"></span>
+</div>   
  <main>
    
 <div class="container-fluid text-center">    
@@ -44,9 +50,7 @@
       {{> all-posts}}
 
     </div>
-    <div class="col-sm-2 sidenav" style="background-color:white;" >
-Favourite Tips:
-    </div>
+   
   </div>
 </div>
 
