@@ -7,9 +7,12 @@ const {
 } = require("../../utils/helpers");
 
 router.get("/", async (req, res) => {
+  if (!req.session.loggedIn) {
+    res.redirect("/login");
+    return;
+  }
   let userEmail = req.session.email;
   let user = await findUserByEmail(userEmail).catch((err) => console.log(err));
-  console.log("my user response object from helper function: ", user);
 
   res.render("account", {
     loggedIn: req.session.loggedIn,
