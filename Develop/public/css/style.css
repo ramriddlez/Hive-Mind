@@ -225,11 +225,3 @@ p#type {
   left: 0px;
 }
 
-/* Small screens */
-@media screen and (max-width: 600px) {
-
- 
-  #tags {max-width:15%;}
-
-}
-
