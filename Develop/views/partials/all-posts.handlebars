@@ -2,24 +2,22 @@
     {{#each formattedTips as |tip|}}
     <article class="dashboard-tip">
         <p class="tip-quote">
-            {{tip.tip}} 
+            {{tip.tip}}
         </p>
         <div>
-            <p class="tip-username"> 
+            <p class="tip-username">
                 - {{tip.userName}}
             </p>
-            
-            <form class="vote-up">
-                <button type="submit">Vote Up</button>
-            </form>
-            |
-            <form class="vote-down">
-                <button type="submit">Vote Down</button>
-            </form>
+            <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
 
+            <script>
+                function myFunction(x) {
+                    x.classList.toggle("fa-thumbs-down");
+                }
+            </script>
         </div>
-    
+
 
     </article>
-    {{/each}}    
+    {{/each}}
 </section>

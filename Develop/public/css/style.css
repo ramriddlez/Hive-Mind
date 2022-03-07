@@ -225,3 +225,13 @@ p#type {
   left: 0px;
 }
 
+
+.fa {
+  font-size: 50px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.fa:hover {
+  color: rgb(158, 47, 130);
+}
