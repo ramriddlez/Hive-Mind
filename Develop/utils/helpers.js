@@ -80,7 +80,13 @@ const mostPopularFilter = async () => {
   let formattedTips = orderedTips.map((tip) => tip.get({ plain: true }));
   return formattedTips;
 };
-
+const formatDate = (exhib_date) => {
+  let newYear = parseInt(exhib_date.getFullYear());
+  let month = exhib_date.getMonth();
+  let day = exhib_date.getDate();
+  let output = `${day}/${month + 1}/${newYear}`;
+  return `${output}`;
+};
 module.exports = {
   getAllTips,
   createNewTip,
@@ -89,6 +95,7 @@ module.exports = {
   getAllUsers,
   findUserByEmail,
   mostPopularFilter,
+  formatDate,
 };
 
 // module.exports = () =>

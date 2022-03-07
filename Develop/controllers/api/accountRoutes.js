@@ -4,6 +4,7 @@ const {
   createNewTip,
   deleteTip,
   mostPopularFilter,
+  formatDate,
 } = require("../../utils/helpers");
 
 router.get("/", async (req, res) => {
@@ -14,21 +15,28 @@ router.get("/", async (req, res) => {
   let userEmail = req.session.email;
   let user = await findUserByEmail(userEmail).catch((err) => console.log(err));
 
-  res.render("account", {
-    loggedIn: req.session.loggedIn,
-    username: user.name,
-    tips: user.tips,
-  });
+  if (user) {
+    let usersTips = user.tips.map((tip) => {
+      let temp = tip;
+      temp.createdAt = formatDate(tip.createdAt);
+      return temp;
+    });
+    res.status(200).render("account", {
+      loggedIn: req.session.loggedIn,
+      username: user.name,
+      tips: usersTips,
+    });
+  } else {
+    res.status(400).redirect("/login");
+  }
 });
 
 router.post("/newTip", async (req, res) => {
-  console.log("reached post");
-  let newTip = await createNewTip(req.session.email, req.body).catch((err) =>
-    console.log(err)
-  );
+
+  let newTip = createNewTip(req.session.email, req.body);
+
   if (!newTip) {
-    res.status(400).json({ message: "Request could not be made" });
-    return;
+    res.status(400).json({ message: "error making new tip" });
   }
   res.status(200).json(newTip);
 });

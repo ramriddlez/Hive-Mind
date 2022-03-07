@@ -15,6 +15,7 @@ const createNewPost = async (event) => {
     }, 2000);
     return;
   }
+
   let postCreated = await fetch("/api/account/newTip", {
     method: "POST",
     body: JSON.stringify({ blogText: blogText.value }),

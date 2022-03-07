@@ -4,6 +4,7 @@ const {
   getAllTips,
   mostPopularFilter,
   findUserByEmail,
+  formatDate,
 } = require("../../utils/helpers");
 
 // renders home page with loggedIn boolean and tips
@@ -17,9 +18,16 @@ router.get("/", async (req, res) => {
   }
   const tips = await getAllTips();
   let formattedTips = tips.map((tip) => tip.get({ plain: true }));
+
+  let allTips = formattedTips.map((tip) => {
+    let temp = tip;
+    temp.createdAt = formatDate(tip.createdAt);
+    return temp;
+  });
   let user = await findUserByEmail(req.session.email);
   let name = user.name;
-  res.render("profile", { loggedIn, formattedTips, name });
+
+  res.render("profile", { loggedIn, allTips, name });
 });
 
 // router.get("/:id", async (req, res) => {

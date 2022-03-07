@@ -6,13 +6,14 @@
                 {{tip.tip}}
             </p>   
             <div class="tip-footer">
-                <p><i>Date Created</i></p>
                 <p class="upvote" style="cursor: pointer; width: max-content; padding: 0.25em" > 
-                  ⬆ {{tip.votes}} 
+                  ⬆    {{tip.votes}} 
             
                 </p>
+            <p><i>{{tip.createdAt}}</i></p>
+
             </div>
             <i class="fa-solid fa-trash-can"></i>
-    </article>
+        </article>
     {{/each}}
 </div>
