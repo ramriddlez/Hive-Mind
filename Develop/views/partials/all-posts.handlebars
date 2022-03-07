@@ -2,12 +2,13 @@
     {{#each formattedTips as |tip|}}
     <article class="dashboard-tip" data-tip-id="{{tip.id}}">
         <p class="tip-quote">
-            {{tip.tip}} 
+            {{tip.tip}}
         </p>
         <div>
-            <p class="tip-username"> 
+            <p class="tip-username">
                 - {{tip.userName}}
             </p>
+
             
             <p class="upvote" style="cursor: pointer;">
                 ⬆️  {{tip.votes}}
@@ -15,5 +16,5 @@
         </div>
 
     </article>
-    {{/each}}    
+    {{/each}}
 </section>
