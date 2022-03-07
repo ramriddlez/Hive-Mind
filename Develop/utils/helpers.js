@@ -66,6 +66,8 @@ const findUserByEmail = async (email) => {
     },
   });
 
+  if (!specificUser) {
+  }
   let formattedVersion = specificUser.get({ plain: true });
   return formattedVersion;
 };

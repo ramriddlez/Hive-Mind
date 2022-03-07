@@ -26,7 +26,7 @@ Run.
 
 `npm start`
 
-Seed the database 
+Seed the database
 
 `node seeds/index.js`
 
@@ -56,7 +56,7 @@ Email: ramankangz@outlook.com
 
 Github: https://github.com/ramriddlez
 
-Email: dejene19@gmail.com
+Email: bdejene19@gmail.com
 
 Github: https://github.com/bdejene19
 
@@ -64,14 +64,12 @@ Email: navraj777@hotmail.com
 
 Github: https://github.com/gammahazard
 
+![HiveMind Homepage](./assets/hivemind-homepage.png)
 
-  ![HiveMind Homepage](./assets/hivemind-homepage.png)
+![HiveMind Login Page](./assets/hivemind-login.png)
 
-  ![HiveMind Login Page](./assets/hivemind-login.png)
+![HiveMind Landing Page Darkmode](./assets/hivemind-landing.png)
 
-  ![HiveMind Landing Page Darkmode](./assets/hivemind-landing.png)
+![HiveMind Landing Page Lightmode](./assets/hivemind-landing-lightmode.png)
 
-  ![HiveMind Landing Page Lightmode](./assets/hivemind-landing-lightmode.png)
-
-  ![HiveMind Account Page](./assets/hivemind-account.png)
-
+![HiveMind Account Page](./assets/hivemind-account.png)
