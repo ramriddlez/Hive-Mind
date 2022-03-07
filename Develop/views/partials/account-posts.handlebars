@@ -6,15 +6,13 @@
         </p>
         <div class="tip-footer">
             <p><i>Date Created</i></p>
-            <p>{{tip.votes}}
-            <form class="vote-up">
-                <button type="submit">Vote Up</button>
-            </form>
-            |
-            <form class="vote-down">
-                <button type="submit">Vote Down</button>
-            </form>
-            </p>
+            <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+
+            <script>
+                function myFunction(x) {
+                    x.classList.toggle("fa-thumbs-down");
+                }
+            </script>
         </div>
         <i class="fa-solid fa-trash-can"></i>
 
