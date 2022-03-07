@@ -22,7 +22,14 @@ router.get("/", async (req, res) => {
 });
 
 router.post("/newTip", async (req, res) => {
-  let newTip = createNewTip(req.session.email, req.body);
+  console.log("reached post");
+  let newTip = await createNewTip(req.session.email, req.body).catch((err) =>
+    console.log(err)
+  );
+  if (!newTip) {
+    res.status(400).json({ message: "Request could not be made" });
+    return;
+  }
   res.status(200).json(newTip);
 });
 
@@ -38,7 +45,7 @@ router.delete("/:id", (req, res) => {
 });
 
 // VOTE UP OR DOWN FUNCTIONALITY
-router.put('/:id/vote-up', async (req, res) => {
+router.put("/:id/vote-up", async (req, res) => {
   let user = await findById(req.params.id).then((err, post) => {
     post.upVotes.push(req.params.id);
     post.voteScore += 1;
@@ -48,7 +55,7 @@ router.put('/:id/vote-up', async (req, res) => {
   });
 });
 
-router.put('/:id/vote-down', (req, res) => {
+router.put("/:id/vote-down", (req, res) => {
   Post.findById(req.params.id).then((err, post) => {
     post.downVotes.push(req.user._id);
     post.voteScore -= 1;
