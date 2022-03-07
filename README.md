@@ -65,13 +65,13 @@ Email: navraj777@hotmail.com
 Github: https://github.com/gammahazard
 
 
-  ![HiveMind Homepage](./assets/hivemind-homepage.png)
+  ![HiveMind Homepage](/Develop/assets/hivemind-homepage.png)
 
-  ![HiveMind Login Page](./assets/hivemind-login.png)
+  ![HiveMind Login Page](/Develop/assets/hivemind-login.png)
 
-  ![HiveMind Landing Page Darkmode](./assets/hivemind-landing.png)
+  ![HiveMind Landing Page Darkmode](/Develop/assets/hivemind-landing.png)
 
-  ![HiveMind Landing Page Lightmode](./assets/hivemind-landing-lightmode.png)
+  ![HiveMind Landing Page Lightmode](/Develop/assets/hivemind-landing-lightmode.png)
 
-  ![HiveMind Account Page](./assets/hivemind-account.png)
+  ![HiveMind Account Page](/Develop/assets/hivemind-account.png)
 
