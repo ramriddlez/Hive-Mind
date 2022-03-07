@@ -22,7 +22,7 @@ Clone this repository, install Node and then run install to install all dependen
 
 `npm install`
 
-Run.
+Run
 
 `npm start`
 
@@ -74,6 +74,3 @@ Github: https://github.com/gammahazard
   ![HiveMind Landing Page Lightmode](./assets/hivemind-landing-lightmode.png)
 
   ![HiveMind Account Page](./assets/hivemind-account.png)
-
-
-
