@@ -11,18 +11,28 @@ FavouriteList.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    favourite_id: {
+
+    list_userID: {
+      type: DataTypes.INTEGER,
       references: {
-        model: "Tip",
+        model: "user",
+        key: "id",
+      },
+    },
+    favourite_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "tip",
         key: "id",
       },
     },
   },
   {
     sequelize,
-    timestamps: true,
+    timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "tip",
+    modelName: "favourite_list",
   }
 );
+module.exports = FavouriteList;

@@ -5,6 +5,10 @@
   align-items: baseline;
   row-gap: 2em;
   column-gap: 2em;
+  padding: 1em;
+  background-color: #3f6895;
+  border-radius: 10px;
+  box-shadow: 0 3px 3px 3px black;
 }
 
 #dashboard-posts .dashboard-tip {
@@ -38,4 +42,10 @@
 }
 .dashboard-tip .tip-quote {
   background-color: #c3c9e9;
+}
+
+@media screen and (max-width: 650px) {
+  #dashboard-posts {
+    width: 100%;
+  }
 }
