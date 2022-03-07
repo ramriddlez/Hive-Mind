@@ -1,25 +1,25 @@
 <div id="past-tips">
     {{#each tips as |tip|}}
-        <article id="account-tip-{{tip.id}}" data-tip-id="{{tip.id}}">
-            <p class="tip-quote">
-                {{tip.tip}}
-            </p>   
-            <div class="tip-footer">
-                <p><i>Date Created</i></p>
-                <p>{{tip.votes}} 
-                     <form class="vote-up" data-id="{{this._id}}">
-    <button type="submit">Vote Up</button>
-  </form>
-  |
-  <form class="vote-down" data-id="{{this._id}}">
-    <button type="submit">Vote Down</button>
-  </form>
-                </p>
-            </div>
-                           <i class="fa-solid fa-trash-can"></i>
+    <article id="account-tip-{{tip.id}}" data-tip-id="{{tip.id}}">
+        <p class="tip-quote">
+            {{tip.tip}}
+        </p>
+        <div class="tip-footer">
+            <p><i>Date Created</i></p>
+            <p>{{tip.votes}}
+            <form class="vote-up">
+                <button type="submit">Vote Up</button>
+            </form>
+            |
+            <form class="vote-down">
+                <button type="submit">Vote Down</button>
+            </form>
+            </p>
+        </div>
+        <i class="fa-solid fa-trash-can"></i>
 
 
-        </article>
+    </article>
 
     {{/each}}
 </div>

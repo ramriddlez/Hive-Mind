@@ -3,13 +3,14 @@ async function newFormHandler(event) {
   
     const userName = document.querySelector('#userName').value;
     const tip = document.querySelector('#tip').value;
-    // const votes = document.querySelector('#votes').value;
+    const votes = document.querySelector('#votes').value;
   
     const response = await fetch(`/api/tip`, {
       method: 'POST',
       body: JSON.stringify({
         userName,
         tip,
+        votes
       }),
       headers: {
         'Content-Type': 'application/json',
