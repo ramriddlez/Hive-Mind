@@ -23,7 +23,7 @@ section #create-tip {
 #create-tip {
   background-image: linear-gradient(30deg, #6649b8, #2892d7);
   border-radius: 10px;
-  box-shadow: 0 5px 5px 5px #23232e;
+  box-shadow: 0 3px 3px 3px #23232e;
 }
 
 h2 {
@@ -106,4 +106,11 @@ form button {
   flex: 1 1 50%;
   margin-top: -1em;
   padding: 0.25em 1em;
+}
+
+@media screen and (max-width: 600px) {
+  #create-tip,
+  #create-tip form {
+    width: 100%;
+  }
 }

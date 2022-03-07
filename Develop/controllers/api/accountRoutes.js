@@ -32,6 +32,7 @@ router.get("/", async (req, res) => {
 });
 
 router.post("/newTip", async (req, res) => {
+
   let newTip = createNewTip(req.session.email, req.body);
 
   if (!newTip) {
