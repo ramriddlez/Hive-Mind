@@ -26,16 +26,29 @@
     <article id="sign-up">
       <h2>Sign Up</h2>
       <form class="signup-form"><br>
-         <label for="new-user">Username:</label><br>
-        <input type="input" id="new-user" placeholder="johnDoe123"/><br>
-      <br>  <label for="new-email">Email:</label> <br>
-        <input type="input" id="new-email" placeholder="jdoe@gmail.com"/><br>
-  
-  
-      <br>  <label for="new-password">Password:</label><br>
-        <input type="password" id="new-password"/>
-  
-      <br>  <button type="button" id="signup-button">Submit</button>
+
+        <label for="new-user">Username:</label><br>
+        <input type="input" id="new-user" placeholder="johnDoe123" /><br>
+        <br> <label for="new-email">Email:</label> <br>
+        <input type="input" id="new-email" placeholder="jdoe@gmail.com" /><br>
+
+
+        <br> <label for="new-password">Password:</label><br>
+        <input type="password" id="new-password" />
+        <section>
+        <label>Enter Captcha:</label>
+        
+          <div class="form-group col-md-3">
+            <input type="text" class="form-control" readonly id="capt">
+          </div>
+          <div class="form-group col-md-1">
+            <input type="text" class="form-control" id="textinput">
+          </div>
+      
+        <h6>Captcha not visible? <img onclick="cap()"src="./imgs/refersh.png" width = "40px"></h6>
+        <br> <button onclick="validcap()" type="button" id="signup-button">Submit</button>
+        </section>
+
       </form>
     </article>
   </section>
