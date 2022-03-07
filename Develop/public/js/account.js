@@ -15,11 +15,15 @@ const createNewPost = async (event) => {
     }, 2000);
     return;
   }
-  await fetch("/api/account/newTip", {
+  let successfulCreation = await fetch("/api/account/newTip", {
     method: "POST",
     body: JSON.stringify({ blogText: blogText.value }),
     headers: { "Content-Type": "application/json" },
   });
+
+  if (successfulCreation.ok) {
+    window.location.replace("/api/account");
+  }
 };
 
 if (newPostBtn) {
