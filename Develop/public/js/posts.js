@@ -5,7 +5,7 @@ $(document).ready(function() {
       const postId = $(this).data('id');
       $.ajax({
         type: 'PUT',
-        url: 'posts/' + postId + '/vote-up',
+        url: 'account/' + postId + '/vote-up',
         success: function(data) {
           console.log('voted up!');
         },
@@ -21,7 +21,7 @@ $(document).ready(function() {
       const postId = $(this).data('id');
       $.ajax({
         type: 'PUT',
-        url: 'posts/' + postId + '/vote-down',
+        url: 'account/' + postId + '/vote-down',
         success: function(data) {
           console.log('voted down!');
         },
