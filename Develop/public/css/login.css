@@ -68,5 +68,6 @@
     row-gap: 0;
   }
   .login-signup input {
+    width: 60vw;
   }
 }
