@@ -1,33 +1,16 @@
-$(document).ready(function() {
-    $('.vote-up').submit(function(e) {
-      e.preventDefault();
-  
-      const postId = $(this).data('id');
-      $.ajax({
-        type: 'PUT',
-        url: 'posts/' + postId + '/vote-up',
-        success: function(data) {
-          console.log('voted up!');
-        },
-        error: function(err) {
-          console.log(err.messsage);
-        }
+$(document).ready(function(){
+    $("#up").click(function(){
+        var up = $.post("/upvote", {changeBy: 1}, function(dataBack){
+    
+            $("#upvote").text(dataBack);
+        });
+    
+    });
+    $("#down").click(function(){
+        var down = $.post("/downvote", {changeBy: 1},
+        function(dataBack){
+            $("#downvote").text(dataBack);
+        });
+    
       });
     });
-  
-    $('.vote-down').submit(function(e) {
-      e.preventDefault();
-  
-      const postId = $(this).data('id');
-      $.ajax({
-        type: 'PUT',
-        url: 'posts/' + postId + '/vote-down',
-        success: function(data) {
-          console.log('voted down!');
-        },
-        error: function(err) {
-          console.log(err.messsage);
-        }
-      });
-    });
-  });
