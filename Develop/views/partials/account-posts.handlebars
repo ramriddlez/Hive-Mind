@@ -1,23 +1,18 @@
 <div id="past-tips">
     {{#each tips as |tip|}}
-    <article id="account-tip-{{tip.id}}" data-tip-id="{{tip.id}}">
-        <p class="tip-quote">
-            {{tip.tip}}
-        </p>
-        <div class="tip-footer">
-            <p><i>Date Created</i></p>
-            <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
 
-            <script>
-                function myFunction(x) {
-                    x.classList.toggle("fa-thumbs-down");
-                }
-            </script>
-        </div>
-        <i class="fa-solid fa-trash-can"></i>
-
-
+        <article id="account-tip-{{tip.id}}" data-tip-id="{{tip.id}}">
+            <p class="tip-quote">
+                {{tip.tip}}
+            </p>   
+            <div class="tip-footer">
+                <p><i>Date Created</i></p>
+                <p class="upvote" style="cursor: pointer; width: max-content; padding: 0.25em" > 
+                  ⬆ {{tip.votes}} 
+            
+                </p>
+            </div>
+            <i class="fa-solid fa-trash-can"></i>
     </article>
-
     {{/each}}
 </div>

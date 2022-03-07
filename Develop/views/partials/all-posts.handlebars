@@ -1,6 +1,6 @@
 <section id="dashboard-posts">
     {{#each formattedTips as |tip|}}
-    <article class="dashboard-tip">
+    <article class="dashboard-tip" data-tip-id="{{tip.id}}">
         <p class="tip-quote">
             {{tip.tip}}
         </p>
@@ -8,15 +8,12 @@
             <p class="tip-username">
                 - {{tip.userName}}
             </p>
-            <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
 
-            <script>
-                function myFunction(x) {
-                    x.classList.toggle("fa-thumbs-down");
-                }
-            </script>
+            
+            <p class="upvote" style="cursor: pointer;">
+                ⬆️  {{tip.votes}}
+            </p>
         </div>
-
 
     </article>
     {{/each}}

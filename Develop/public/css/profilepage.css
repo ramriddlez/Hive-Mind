@@ -16,15 +16,15 @@ div#slideSource {
   opacity: 1;
   -webkit-transition: opacity 3s;
 
-  -moz-transition: opacity 3s;     
-  transition: opacity 3s; 
-  }
-div#welcomemsg-quote{
-  text-align:center;
+  -moz-transition: opacity 3s;
+  transition: opacity 3s;
 }
-  div#slideSource.fade {
-  opacity:0;
-  }
+div#welcomemsg-quote {
+  text-align: center;
+}
+div#slideSource.fade {
+  opacity: 0;
+}
 
 .sidenav {
   padding-top: 20px;
@@ -70,40 +70,33 @@ div.container-fluid {
   color: black;
 }
 
+#btn2:hover {
+  background-color: white;
+  color: black;
+}
 
+#btn1 {
+  color: white;
+  background-color: black;
+}
 
-  
-#btn2:hover{
-  background-color:white;
-   color:black;;
-  }
-  
-  #btn1 {
-    color:white;
-    background-color:black;
+h3 {
+  text-align: center;
+  margin: top 5px;
+  margin-bottom: 5px;
+}
 
-
-  }
-    
-   h3 {
-     text-align:center;
-     margin: top 5px;
-     margin-bottom:5px;
-   }
-  
-  #btn2 {
-    color:white;
-    background-color:black;
-    margin-left:50%;
-    
-  }
-  img#dogImage{
-    max-width:500px;
-    max-height:500px;
-  }
+#btn2 {
+  color: white;
+  background-color: black;
+  margin-left: 50%;
+}
+img#dogImage {
+  max-width: 500px;
+  max-height: 500px;
+}
 body {
   background: #212129;
-
 }
 
 ::selection {
@@ -111,148 +104,144 @@ body {
 }
 
 .search-wrapper {
-   position: absolute;
-
-   
-    
-    
-  
-  
-
+  position: absolute;
 }
-.search-wrapper.active {}
+.search-wrapper.active {
+}
 
-.search-wrapper .input-holder {    
-   height: 70px;
-   width:70px;
-   overflow: hidden;
-   background: rgba(255,255,255,0);
-   border-radius:6px;
-   position: relative;
-   -ms-transform-origin-y: 50em;
-   transition: all 0.3s ease-in-out;
-   padding-left:15px;
+.search-wrapper .input-holder {
+  height: 70px;
+  width: 70px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0);
+  border-radius: 6px;
+  position: relative;
+  -ms-transform-origin-y: 50em;
+  transition: all 0.3s ease-in-out;
+  padding-left: 15px;
 }
 .search-wrapper.active .input-holder {
-   width:450px;
-   border-radius: 50px;
-   background: black;
-   transition: all .5s cubic-bezier(0.000, 0.105, 0.035, 1.570);
+  width: 450px;
+  border-radius: 50px;
+  background: black;
+  transition: all 0.5s cubic-bezier(0, 0.105, 0.035, 1.57);
 }
 .search-wrapper .input-holder .search-input {
-   width:100%;
-   height: 50px;
-   padding:0px 70px 0 20px;
-   opacity: 0;
-   position: absolute;
-   top:0px;
-   left:0px;
-   background: transparent;
-   box-sizing: border-box;
-   border:none;
-   outline:none;
-   font-family:"Open Sans", Arial, Verdana;
-   font-size: 16px;
-   font-weight: 400;
-   line-height: 20px;
-   color:#FFF;
-   transform: translate(0, 1000px);
-   transition: all .3s cubic-bezier(0.000, 0.105, 0.035, 1.570);
-   transition-delay: 0.3s;
+  width: 100%;
+  height: 50px;
+  padding: 0px 70px 0 20px;
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: transparent;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  font-family: "Open Sans", Arial, Verdana;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #fff;
+  transform: translate(0, 1000px);
+  transition: all 0.3s cubic-bezier(0, 0.105, 0.035, 1.57);
+  transition-delay: 0.3s;
 }
 .search-wrapper.active .input-holder .search-input {
-   opacity: 1;
-   transform: translate(0, 10px);
+  opacity: 1;
+  transform: translate(0, 10px);
 }
 .search-wrapper .input-holder .search-icon {
-   width:70px;
-   height:70px;
-   border:none;
-   border-radius:6px;
-   background: #FFF;
-   padding:0px;
-   outline:none;
-   position: relative;
-   z-index: 2;
-   float:right;
-   cursor: pointer;
-   transition: all 0.3s ease-in-out;
+  width: 70px;
+  height: 70px;
+  border: none;
+  border-radius: 6px;
+  background: #fff;
+  padding: 0px;
+  outline: none;
+  position: relative;
+  z-index: 2;
+  float: right;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 .search-wrapper.active .input-holder .search-icon {
-   width: 50px;
-   height:50px;
-   margin: 10px;
-   border-radius: 30px;
+  width: 15%;
+  height: 50px;
+  margin: 10px;
+  border-radius: 30px;
 }
 .search-wrapper .input-holder .search-icon span {
-   width:22px;
-   height:22px;
-   display: inline-block;
-   vertical-align: middle;
-   position:relative;
-   transform: rotate(45deg);
-   transition: all .4s cubic-bezier(0.650, -0.600, 0.240, 1.650);
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  transform: rotate(45deg);
+  transition: all 0.4s cubic-bezier(0.65, -0.6, 0.24, 1.65);
 }
 .search-wrapper.active .input-holder .search-icon span {
-   transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
-.search-wrapper .input-holder .search-icon span::before, .search-wrapper .input-holder .search-icon span::after {
-   position: absolute; 
-   content:'';
+.search-wrapper .input-holder .search-icon span::before,
+.search-wrapper .input-holder .search-icon span::after {
+  position: absolute;
+  content: "";
 }
 .search-wrapper .input-holder .search-icon span::before {
-   width: 4px;
-   height: 11px;
-   left: 9px;
-   top: 18px;
-   border-radius: 2px;
-   background: #FE5F55;
+  width: 4px;
+  height: 11px;
+  left: 9px;
+  top: 18px;
+  border-radius: 2px;
+  background: #fe5f55;
 }
 .search-wrapper .input-holder .search-icon span::after {
-   width: 14px;
-   height: 14px;
-   left: 0px;
-   top: 0px;
-   border-radius: 16px;
-   border: 4px solid #FE5F55;
+  width: 14px;
+  height: 14px;
+  left: 0px;
+  top: 0px;
+  border-radius: 16px;
+  border: 4px solid #fe5f55;
 }
 .search-wrapper .close {
-   position: absolute;
-   z-index: 1;
-   top:24px;
-   right:20px;
-   width:25px;
-   height:25px;
-   cursor: pointer;
-   transform: rotate(-180deg);
-   transition: all .3s cubic-bezier(0.285, -0.450, 0.935, 0.110);
-   transition-delay: 0.2s;
-   color:black;
+  position: absolute;
+  z-index: 1;
+  top: 24px;
+  right: 20px;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  transform: rotate(-180deg);
+  transition: all 0.3s cubic-bezier(0.285, -0.45, 0.935, 0.11);
+  transition-delay: 0.2s;
+  color: black;
 }
 .search-wrapper.active .close {
-   right:101.5%;
-   bottom:15px;
-   transform: rotate(45deg);
-   transition: all .6s cubic-bezier(0.000, 0.105, 0.035, 1.570);
-   transition-delay: 0.5s;
+  right: 101.5%;
+  bottom: 15px;
+  transform: rotate(45deg);
+  transition: all 0.6s cubic-bezier(0, 0.105, 0.035, 1.57);
+  transition-delay: 0.5s;
 }
-.search-wrapper .close::before, .search-wrapper .close::after {
-   position:absolute;
-   content:'';
-   background: black;
-   border-radius: 2px;
+.search-wrapper .close::before,
+.search-wrapper .close::after {
+  position: absolute;
+  content: "";
+  background: black;
+  border-radius: 2px;
 }
 .search-wrapper .close::before {
-   width: 5px;
-   height: 25px;
-   left: 10px;
-   top: 0px;
-   color:black;
+  width: 5px;
+  height: 25px;
+  left: 10px;
+  top: 0px;
+  color: black;
 }
 .search-wrapper .close::after {
-   width: 25px;
-   height: 5px;
-   left: 0px;
-   top: 10px;
-   color:black;
+  width: 25px;
+  height: 5px;
+  left: 0px;
+  top: 10px;
+  color: black;
 }

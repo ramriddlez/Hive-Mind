@@ -1,6 +1,10 @@
 const router = require("express").Router();
 const { User } = require("../../models");
-const { getAllTips, mostPopularFilter } = require("../../utils/helpers");
+const {
+  getAllTips,
+  mostPopularFilter,
+  findUserByEmail,
+} = require("../../utils/helpers");
 
 // renders home page with loggedIn boolean and tips
 router.get("/", async (req, res) => {
@@ -13,7 +17,9 @@ router.get("/", async (req, res) => {
   }
   const tips = await getAllTips();
   let formattedTips = tips.map((tip) => tip.get({ plain: true }));
-  res.render("profile", { loggedIn, formattedTips });
+  let user = await findUserByEmail(req.session.email);
+  let name = user.name;
+  res.render("profile", { loggedIn, formattedTips, name });
 });
 
 // router.get("/:id", async (req, res) => {
