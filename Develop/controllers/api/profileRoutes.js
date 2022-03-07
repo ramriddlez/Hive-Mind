@@ -1,16 +1,27 @@
 const router = require("express").Router();
 const { User } = require("../../models");
-const { getAllTips, mostPopularFilter } = require("../../utils/helpers");
+const {
+  getAllTips,
+  mostPopularFilter,
+  findUserByEmail,
+} = require("../../utils/helpers");
 
 // renders home page with loggedIn boolean and tips
 router.get("/", async (req, res) => {
   // console.log("this is my req session: ", req.session.loggedIn);
   let loggedIn = req.session.loggedIn;
+
+  if (!loggedIn) {
+    res.redirect("/login");
+    return;
+  }
   const tips = await getAllTips();
   let formattedTips = tips.map((tip) => tip.get({ plain: true }));
-  console.log("/:: ", new Date(formattedTips[0].createdAt).getFullYear());
-  res.render("profile", { loggedIn, formattedTips });
+  let user = await findUserByEmail(req.session.email);
+  let name = user.name;
+  res.render("profile", { loggedIn, formattedTips, name });
 });
+
 // router.get("/:id", async (req, res) => {
 //   try {
 //     const userData = await User.findByPk(req.params.id);

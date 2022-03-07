@@ -7,9 +7,12 @@ const {
 } = require("../../utils/helpers");
 
 router.get("/", async (req, res) => {
+  if (!req.session.loggedIn) {
+    res.redirect("/login");
+    return;
+  }
   let userEmail = req.session.email;
   let user = await findUserByEmail(userEmail).catch((err) => console.log(err));
-  console.log("my user response object from helper function: ", user);
 
   res.render("account", {
     loggedIn: req.session.loggedIn,
@@ -33,6 +36,28 @@ router.delete("/:id", (req, res) => {
     res.status(500).json({ message: "Error handling delete request" });
   }
 });
+
+// VOTE UP OR DOWN FUNCTIONALITY
+router.put('/:id/vote-up', async (req, res) => {
+  let user = await findById(req.params.id).then((err, post) => {
+    post.upVotes.push(req.params.id);
+    post.voteScore += 1;
+    post.save();
+
+    return res.status(200);
+  });
+});
+
+router.put('/:id/vote-down', (req, res) => {
+  Post.findById(req.params.id).then((err, post) => {
+    post.downVotes.push(req.user._id);
+    post.voteScore -= 1;
+    post.save();
+
+    return res.status(200);
+  });
+});
+
 // filters route
 router.get("/:filter", async (req, res) => {
   let tipFilterType = req.params.filter;

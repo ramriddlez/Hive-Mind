@@ -2,6 +2,7 @@ const sequelize = require("./config/connection");
 const express = require("express");
 const exphbs = require("express-handlebars");
 const session = require("express-session");
+var bodyParser = require("body-parser");
 const path = require("path");
 const allRoutes = require("./controllers/index");
 
@@ -13,6 +14,9 @@ const PORT = process.env.PORT || 3001;
 // // initialize handlebars as our view engine through express middleware
 app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
+
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(express.static("public"));
 
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
 const sess = {
@@ -31,6 +35,7 @@ const sess = {
 };
 
 app.use(session(sess));
+
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());

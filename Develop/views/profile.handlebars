@@ -18,40 +18,34 @@
     <link rel="stylesheet" href="/css/profile.css" />
     <link rel="stylesheet" href="/css/profilepage.css" />
 </head>
-   <div class="search-wrapper">
-    <div class="input-holder">
-        <input type="text" class="search-input" placeholder="Type to search" />
-        <button class="search-icon" onclick="searchToggle(this, event);"><span></span></button>
-    </div>
-    <span class="close" onclick="searchToggle(this, event);"></span>
-</div>  
-<button id="btn2">Bring me back!</button>
-<button id="btn1">Show me cute dogs</button>
- 
- <main>
-   
-<div class="container-fluid text-center">    
+    
 
-  <div class="row content">
+<main >
+  
+ <button id="btn2" style="margin-left: 25em;">Bring me back!</button>
+    <button id="btn1">Show me cute dogs</button>
+  <div class="row content">   
+    <div class="col-sm-11 text-left col-lg-10"> 
+  
 
-   
-    <div class="col-sm-8 text-left"> 
-    <div class="a" id="welcomemsg-quote"> 
-      <h1>
-        <a  id="welcometype" class="typewrite" data-period="2000" data-type='[ "Welcome!", "Username!", "This is the HiveMind Landing page", "Search and favourite tips from other community members!" ]'>
-          <span class="wrap"></span>
-        </a>
-      </h1>
+     
+      <div class="a" id="welcomemsg-quote"> 
+        
+        <h1>
+          <a  id="welcometype" class="typewrite" data-period="2000" data-type='[ "Welcome!", "{{name}}", "This is the HiveMind Landing page", "Search and favourite tips from other community members!" ]'>
+            <span class="wrap"></span>
+          </a>
+        </h1>
+        </div>
+        <h3>Quote of the day!</h3>
+        {{> daily-quote}}
+  
+        <h3>The Hive Head</h3>
+        {{> all-posts}}
+
       </div>
-      <h3>Quote of the day!</h3>
-      {{> daily-quote}}
-      <h3>The Hive Head</h3>
-      {{> all-posts}}
-
-    </div>
-   
+    {{!-- </div> --}}
   </div>
-</div>
 
 
 </main>
@@ -68,3 +62,4 @@
 <script src="/js/landing.js"></script>
 <script src="/js/script.js"></script>
 <script src="/js/profilepage.js"></script>
+<script src="/js/account.js"></script>
