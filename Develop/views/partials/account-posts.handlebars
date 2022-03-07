@@ -6,17 +6,17 @@
             </p>   
             <div class="tip-footer">
                 <p><i>Date Created</i></p>
-                <p>{{tip.votes}} 
-                     <form class="vote-up" data-id="{{this._id}}">
+                <p class="upvote" style="cursor: pointer; width: max-content; padding: 0.25em" > ⬆ {{tip.votes}} 
+                     {{!-- <form class="vote-up" data-id="{{this._id}}">
     <button type="submit">Vote Up</button>
   </form>
   |
   <form class="vote-down" data-id="{{this._id}}">
     <button type="submit">Vote Down</button>
-  </form>
+  </form> --}}
                 </p>
             </div>
-                           <i class="fa-solid fa-trash-can"></i>
+            <i class="fa-solid fa-trash-can"></i>
 
 
         </article>
