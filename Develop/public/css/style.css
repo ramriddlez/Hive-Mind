@@ -211,6 +211,7 @@ p#type {
 }
 .navbar {
   top: 0;
+  height: 100vh;
 }
 
 .navbar:hover .link-text {
@@ -224,7 +225,6 @@ p#type {
 .navbar:hover .logo-text {
   left: 0px;
 }
-
 
 .fa {
   font-size: 50px;
