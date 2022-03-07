@@ -4,6 +4,8 @@
 #login-page {
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 90vh;
   padding: 2em 0;
 }
 .login-signup {
@@ -49,4 +51,22 @@
   background-color: var(--btn-prime-color);
   color: white;
   font-weight: 500;
+}
+
+@media screen and (max-width: 700px) {
+  #login-page {
+    height: 100vh;
+    padding: 5em 2em;
+  }
+  .login-signup article {
+    padding: 1em;
+    row-gap: 0;
+    flex: 1 1 100%;
+  }
+  .login-signup form {
+    padding: 0;
+    row-gap: 0;
+  }
+  .login-signup input {
+  }
 }
