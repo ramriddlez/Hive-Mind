@@ -1,3 +1,6 @@
+document.getElementById("headcard").style.display="none";
+document.getElementById("bodycard").style.display="none";
+document.getElementById("cardtxt").style.display="none";
 const weeklyQuoteGenerator = async () => {
   let userStore = getLocalStorage();
 
@@ -78,5 +81,24 @@ const setQuotesLocalStore = (userDay, quoteIndex) => {
   };
   localStorage.setItem(storeName, JSON.stringify(userObject));
 };
+
+$(document).ready(function () {
+
+  $("#bodycard").fadeIn(2000)
+   $(".card-header").fadeIn(2000);
+   });
+      
+
+
+
+
+   $(document).ready(function () {
+
+    $("#cardtxt").fadeIn(2000)
+
+     });
+        
+
+
 
 weeklyQuoteGenerator();
