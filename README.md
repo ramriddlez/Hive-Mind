@@ -16,6 +16,11 @@ HiveMind offers access to a digital community of mental health advocates where t
 - [Contribute](#contribute)
 - [Questions](#questions)
 
+## Technologies Used
+- HTML, CSS, JS 
+- Express.js, MySQL, ORM (sequelize)
+- jQuery, Bootstrap, Animate.js, Darkmode.js
+
 ## Installation
 
 Clone this repository, install Node and then run install to install all dependencies.
