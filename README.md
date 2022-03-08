@@ -56,7 +56,7 @@ Email: ramankangz@outlook.com
 
 Github: https://github.com/ramriddlez
 
-Email: dejene19@gmail.com
+Email: bdejene19@gmail.com
 
 Github: https://github.com/bdejene19
 
